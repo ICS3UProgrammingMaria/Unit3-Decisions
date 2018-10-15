@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{882E4F68-1ECB-4290-8103-658E3810E99A}</ProjectGuid>
+    <ProjectGuid>{EE45D5C2-F56D-4A37-AE91-B8F55F2D7592}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>GuessGameMaria</RootNamespace>
-    <AssemblyName>GuessGameMaria</AssemblyName>
+    <RootNamespace>RandNumberMaria</RootNamespace>
+    <AssemblyName>RandNumberMaria</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,17 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GuessGameForm.cs">
+    <Compile Include="RandNumberForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GuessGameForm.Designer.cs">
-      <DependentUpon>GuessGameForm.cs</DependentUpon>
+    <Compile Include="RandNumberForm.Designer.cs">
+      <DependentUpon>RandNumberForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GuessGame.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GuessGameForm.resx">
-      <DependentUpon>GuessGameForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -64,8 +61,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RandNumberForm.resx">
+      <DependentUpon>RandNumberForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,12 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\red_x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\checkmark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
