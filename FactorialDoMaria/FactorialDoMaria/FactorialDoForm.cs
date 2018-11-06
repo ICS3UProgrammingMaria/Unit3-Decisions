@@ -1,5 +1,5 @@
 ﻿/*
- * Created by: First Last
+ * Created by: Maria
  * Created on: Day-Month-Year
  * Created for: ICS3U Programming
  * Daily Assignment – Day #20 - Factorial Do While
@@ -12,8 +12,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text; 
+using System.Threading.Tasks; 
 using System.Windows.Forms;
 
 namespace FactorialDoMaria
@@ -41,7 +41,7 @@ namespace FactorialDoMaria
             factorialNumber = Convert.ToDouble(this.txtuserAnswer.Text);
 
             //set the count to 0 
-            //factorialAnswer = 0;
+            factorialCounter = 0
 
             //multiply the counter by the next incremented number until it reaches the users number
             do
@@ -49,12 +49,13 @@ namespace FactorialDoMaria
                 //increment the counter by 1
                 factorialNumber = factorialNumber + 1;
 
-                //list the counter number in the listbox for the user
-
+                //list the counter number in the listbox for the user to see
+                this.lstFactorialNumbers.Items.Add(factorialCounter);
 
                 //multiply the counter by the answer
+                factorialAnswer = factorialAnswer * factorialCounter;
 
-            } while (  );
+            } while (FactorialCounter < factorialNumber);
 
             //convert the factorial answer to a string and inset it into the label
             this.lblFactorialAnswer.Text = this.txtuserAnswer.Text + "! = " + Convert.ToString(factorialAnswer);

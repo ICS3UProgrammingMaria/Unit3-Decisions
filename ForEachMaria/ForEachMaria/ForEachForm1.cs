@@ -3,7 +3,7 @@
  * Created on: 02-11-2018
  * Created for: ICS3U Programming
  * Daily Assignment – Day #27 - Control Objects
- * This program...
+ * This program changes the colours of onjects in the form when
 */
 
 using System;
@@ -30,14 +30,22 @@ namespace ForEachMaria
             //loop through each object on the form and make it green 
             foreach (Control aControlObject in this.Controls)
             {
-                aControlObject.BackColor = Color.Green;
+                aControlObject.BackColor = Color.White;
 
                 //if the object is a label, make it purple
                 if(aControlObject.GetType() == typeof(Label))
                 {
-                    aControlObject.BackColor = Color.Purple;
+                    aControlObject.BackColor = Color.Coral;
                 }
             }
         }
+   
+        private void lblCntrlLabel_Click(object sender, EventArgs e)
+        {
+            foreach (Control aControlObject in this.Controls)
+                aControlObject.BackColor = Color.Coral;
+            this.BackColor = Color.red;
+        }
     }
 }
+
