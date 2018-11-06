@@ -10,11 +10,32 @@ using System.Windows.Forms;
 
 namespace RunningAveMaria
 {
-    public partial class Form1 : Form
+    public partial class frmRunningAve : Form
     {
-        public Form1()
+        public frmRunningAve()
         {
             InitializeComponent();
+        }
+
+        private void btnAverage_Click(object sender, EventArgs e)
+        {
+            //declare local variables
+            int nextNumber;
+            int total;
+            int mark;
+
+            //get the number from the textbox
+            nextNumber = int.Parse(txtNumber.Text);
+
+            //if th user enters -1, display a Goodbye message and disable buttons
+
+
+            else if (nextNumber == -1)
+            {
+                MessageBox.Show("Running average ended.", "Running Average");
+                this.btnAverage.Enabled = false;
+                this.txtNumber.Visible = false;
+            }
         }
     }
 }
