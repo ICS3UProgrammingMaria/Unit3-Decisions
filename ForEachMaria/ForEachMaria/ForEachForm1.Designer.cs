@@ -52,6 +52,7 @@
             this.lblCntrlClick.Size = new System.Drawing.Size(165, 20);
             this.lblCntrlClick.TabIndex = 1;
             this.lblCntrlClick.Text = "No click me!";
+            this.lblCntrlClick.Click += new System.EventHandler(this.lblCntrlClick_Click);
             // 
             // frmForEach
             // 

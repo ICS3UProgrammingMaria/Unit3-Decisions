@@ -33,18 +33,18 @@ namespace ForEachMaria
                 aControlObject.BackColor = Color.White;
 
                 //if the object is a label, make it purple
-                if(aControlObject.GetType() == typeof(Label))
+                if (aControlObject.GetType() == typeof(Label))
                 {
                     aControlObject.BackColor = Color.Coral;
                 }
             }
         }
-   
-        private void lblCntrlLabel_Click(object sender, EventArgs e)
+
+        private void lblCntrlClick_Click(object sender, EventArgs e)
         {
             foreach (Control aControlObject in this.Controls)
-                aControlObject.BackColor = Color.Coral;
-            this.BackColor = Color.red;
+            aControlObject.BackColor = Color.Salmon;
+            this.BackColor = Color.Red;
         }
     }
 }
